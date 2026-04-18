@@ -1,4 +1,6 @@
 Label
-Button
+Sprite2D
+RichTextLabel
 ColorRect
+Button
 CanvasModulate
