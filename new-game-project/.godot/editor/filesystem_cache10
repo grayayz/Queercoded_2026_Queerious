@@ -1,6 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1776540895
+::res://::1776541911
 icon.svg::CompressedTexture2D::1790880795757653::1776539964::1776540190::1::::<><><>0<>0<>1d558fff71561543e2cf7e0d300c3350<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-scene_1.tscn::PackedScene::8628243031432310404::1776539964::0::1::::<><><>0<>0<><>::
-::res://Art/::1776540895
+scene_1.tscn::PackedScene::8628243031432310404::1776541911::0::1::::<><><>0<>0<><>::uid://jq2o8xrisfb6::::res://Art/title_screen.png<>uid://b4tkflodhyvv::::res://Fonts/bubble-font/Bubble-w10MZ.otf
+::res://Art/::1776542223
+circle.png::CompressedTexture2D::542639727415429502::1776542223::1776542225::1::::<><><>0<>0<>0912e1d5cf5ba3fd619357c6b7cbbd7e<>res://.godot/imported/circle.png-75aa8a8ef0a36174638fd55423573a40.ctex::
 title_screen.png::CompressedTexture2D::666395766311473477::1776540875::1776540895::1::::<><><>0<>0<>b30b1a78abea60e7b3465f52ccd9ca0c<>res://.godot/imported/title_screen.png-a0b56efd03e091f1c5ac3fd53241f199.ctex::
+::res://Fonts/::1776541578
+::res://Fonts/bubble-font/::1776541841
+Bubble-w10MZ.otf::FontFile::131227559557385511::1770220774::1776541841::1::::<><><>0<>0<>04aa7231dcdaf14fe127e2d064395293<>res://.godot/imported/Bubble-w10MZ.otf-7bfff61fc65d7ada9997f722fd3d133e.fontdata::
+info.txt::TextFile::-1::1770220774::0::1::::<><><>0<>0<><>::
+::res://Fonts/super-frog-font/::1776541392
+info.txt::TextFile::-1::1769221632::0::1::::<><><>0<>0<><>::
+SuperFrog-Yqy1q.ttf::FontFile::8900379421441059605::1769221632::1776541392::1::::<><><>0<>0<>58e125ff933448749fdbd575deb84585<>res://.godot/imported/SuperFrog-Yqy1q.ttf-40b442deea3e3b2aa2843fd9baa14834.fontdata::
