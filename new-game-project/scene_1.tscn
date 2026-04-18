@@ -29,15 +29,15 @@ scale = Vector2(2.588889, 2.588889)
 texture = ExtResource("1_3xosi")
 
 [node name="Label" type="Label" parent="TitleScreen" unique_id=1691204678]
-offset_left = -194.29187
-offset_top = -34.377686
-offset_right = 164.70813
-offset_bottom = 45.622314
+offset_left = -200.47212
+offset_top = -37.081547
+offset_right = 158.52788
+offset_bottom = 42.918453
 text = "Queerious"
 label_settings = SubResource("LabelSettings_knagl")
 
 [node name="Circle" type="Sprite2D" parent="TitleScreen" unique_id=1006953261]
-position = Vector2(-1.9313507, 82.27468)
+position = Vector2(-11.201737, 80.34335)
 scale = Vector2(0.3862661, 0.3862661)
 texture = ExtResource("3_1abo5")
 
