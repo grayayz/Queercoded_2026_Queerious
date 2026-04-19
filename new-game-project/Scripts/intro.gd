@@ -22,7 +22,7 @@ func _on_do_something() -> void:
 	for i in 10:
 		$white.color -= Color(0,0,0,0.1)
 		await get_tree().create_timer(0.1).timeout
-	$white.z_index = -3
+	$white.queue_free()
 
 func _on_frog_pressed() -> void:
 	diabox(0, Global.type)
@@ -52,8 +52,4 @@ func diabox(id, type):
 func _on_next_pressed() -> void:
 	if pressed == false:
 		pressed = true
-		$white.z_index = 1
-		for i in 10:
-			$white.color += Color(0,0,0,0.1)
-			await get_tree().create_timer(0.1).timeout
 		get_tree().change_scene_to_packed(next)

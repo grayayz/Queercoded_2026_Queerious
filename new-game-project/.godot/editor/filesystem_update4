@@ -5,3 +5,4 @@ res://Dialogue_Properties/name_box.tres
 res://Dialogue_Properties/inner_name_box.tres
 res://Button_Properties/DEFAULT_BUTTON_THEME.tres
 res://Scripts/intro.gd
+res://level2.tscn
