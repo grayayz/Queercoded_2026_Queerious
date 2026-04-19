@@ -2,7 +2,6 @@ extends Node2D
 
 signal continue_text
 
-@onready var sprite =  $Marker2D/character
 @onready var dia = $dialogue_Box
 
 func _input(event: InputEvent) -> void:
@@ -32,7 +31,6 @@ func _on_jupiter_pressed() -> void:
 	diabox(2)
 	
 func diabox(id):
-	sprite.change(id)
 	dia.show()
 	dia.parse(dia.statements[id])
 	dia.type()
