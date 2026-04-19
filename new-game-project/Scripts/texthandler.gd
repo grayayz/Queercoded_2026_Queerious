@@ -8,8 +8,7 @@ var a = 0
 var is_typing = false
 
 signal do_something
-signal charac_change(id, lr)
-
+signal charac_change(id)
 
 func _ready() -> void:
 	parse(texts[0])
@@ -29,7 +28,6 @@ func type():
 		is_typing = true
 		if lines[a] == "*":
 			emit_signal("do_something")
-			await get_tree().create_timer(1)
 			a += 1
 			type()
 		else:
@@ -47,13 +45,17 @@ func _on_continue_text() -> void:
 		type()
 		
 func contains(line):
-	if line[0] == "/":
-		emit_signal("charac_change", line[1], line[2])
+	#if line[0] == "/":
+		#emit_signal("charac_change", line[1], line[2])
+		#var gather: String = ""
+		#for i in range(3, len(line)):
+			#gather += line[i]
+		#return gather
+	if line[0] == "|":
+		emit_signal("charac_change", line[1])
 		var gather: String = ""
-		for i in range(3, len(line)):
+		for i in range(2, len(line)):
 			gather += line[i]
 		return gather
-		
-		
 	else:
 		return line

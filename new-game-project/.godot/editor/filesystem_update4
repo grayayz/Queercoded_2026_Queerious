@@ -1,2 +1,6 @@
 res://intro.tscn
 res://Scripts/character.gd
+res://Text/intro.txt
+res://Scripts/name_box.gd
+res://Scripts/texthandler.gd
+res://Text/reminders.txt
