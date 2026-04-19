@@ -25,7 +25,7 @@ position = Vector2(550, 349)
 scale = Vector2(2.4190974, 2.5928242)
 texture = ExtResource("1_3xosi")
 
-[node name="Label" type="Label" parent="TitleScreen" unique_id=1691204678]
+[node name="title" type="Label" parent="TitleScreen" unique_id=1691204678]
 offset_left = -200.47212
 offset_top = -37.081547
 offset_right = 158.52788
@@ -33,10 +33,12 @@ offset_bottom = 42.918453
 text = "Queerious"
 label_settings = SubResource("LabelSettings_knagl")
 
-[node name="Button" type="Button" parent="TitleScreen" unique_id=791148537]
+[node name="title_button" type="Button" parent="TitleScreen" unique_id=791148537]
 offset_left = -61.59322
 offset_top = 83.69252
 offset_right = 19.842113
 offset_bottom = 112.69252
 theme = ExtResource("4_knagl")
 text = "PLAY"
+
+[connection signal="pressed" from="TitleScreen/title_button" to="." method="_on_title_button_pressed"]
