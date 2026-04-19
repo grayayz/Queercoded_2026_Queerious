@@ -29,7 +29,7 @@ font_size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_545ku"]
 font = ExtResource("9_2x2vu")
-font_size = 25
+font_size = 20
 
 [node name="Node2D" type="Node2D" unique_id=1600832613]
 script = ExtResource("1_mw4xc")
@@ -250,8 +250,9 @@ offset_left = 32.0
 offset_top = 15.0
 offset_right = 315.0
 offset_bottom = 53.0
-text = "Move to Next Week"
+text = "THANK YOU FOR PLAYING!"
 label_settings = SubResource("LabelSettings_545ku")
+horizontal_alignment = 1
 
 [connection signal="continue_text" from="." to="dialogue_Box" method="_on_continue_text"]
 [connection signal="pressed" from="bg/frog" to="." method="_on_frog_pressed"]
