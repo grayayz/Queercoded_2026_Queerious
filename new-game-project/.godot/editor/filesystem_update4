@@ -13,3 +13,4 @@ res://Dialogue_Boxes/jelly_dialogue_box.tscn
 res://Dialogue_Boxes/jupiters_dialogue_box.tscn
 res://Dialogue_Boxes/star_dialogue_box.tscn
 res://Scripts/intro.gd
+res://Dialogue_Boxes/standard_dialogue_box.tscn
