@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cwjjrjtjbb7aj" path="res://Dialogue_Properties/inner_dialogue.tres" id="2_0x7a3"]
 [ext_resource type="Theme" uid="uid://dj3n5xdd3yxg6" path="res://Dialogue_Properties/name_box.tres" id="3_l10ct"]
 [ext_resource type="Theme" uid="uid://7a3knkxlslb4" path="res://Dialogue_Properties/inner_name_box.tres" id="4_42j2o"]
-[ext_resource type="Texture2D" uid="uid://c145svki8hmcy" path="res://Art/Characters(Bigger)/Star_Big.png" id="5_vfmgr"]
+[ext_resource type="Texture2D" uid="uid://c145svki8hmcy" path="res://Characters(Bigger)/Star_Big.png" id="5_vfmgr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4h1r"]
 bg_color = Color(0.60719997, 0.83137333, 0.92, 0.7882353)
@@ -24,7 +24,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 6
 
-[node name="DialogueBox" type="Panel" unique_id=1315340624]
+[node name="DialogueBox" type="Panel" unique_id=1315340624 groups=["diabox"]]
 offset_left = 8.0
 offset_top = 482.0
 offset_right = 999.0

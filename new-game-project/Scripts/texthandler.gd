@@ -1,7 +1,8 @@
-extends ColorRect
+extends Control
 
 @export var texts : Array[String] 
 @export var statements : Array[String]
+@export var boxes : Array[PackedScene]
 
 var lines: Array
 var a = 0
@@ -56,3 +57,16 @@ func contains(line):
 		return gather
 	else:
 		return line
+
+func _on_charac_change(id: Variant) -> void:
+	var children = get_children()
+	for a in children:
+		if a.is_in_group("diabox"):
+			a.queue_free()
+	var node = boxes[str_to_var(id)].instantiate()
+	add_child(node)
+	node.global_position = global_position
+	node.owner = self
+	$dialogue.move_to_front()
+
+		

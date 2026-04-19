@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cwjjrjtjbb7aj" path="res://Dialogue_Properties/inner_dialogue.tres" id="2_0cpmw"]
 [ext_resource type="Theme" uid="uid://dj3n5xdd3yxg6" path="res://Dialogue_Properties/name_box.tres" id="3_sfgej"]
 [ext_resource type="Theme" uid="uid://7a3knkxlslb4" path="res://Dialogue_Properties/inner_name_box.tres" id="4_6bw55"]
-[ext_resource type="Texture2D" uid="uid://dr3jlmjmt1wkm" path="res://Art/Characters(Bigger)/Jellyfish_Big.png" id="5_q2yy6"]
+[ext_resource type="Texture2D" uid="uid://dr3jlmjmt1wkm" path="res://Characters(Bigger)/Jellyfish_Big.png" id="5_q2yy6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8xi7"]
 bg_color = Color(0.8260801, 0.7008, 0.96, 0.7882353)
@@ -24,7 +24,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 6
 
-[node name="DialogueBox" type="Panel" unique_id=1315340624]
+[node name="DialogueBox" type="Panel" unique_id=1315340624 groups=["diabox"]]
 offset_left = 8.0
 offset_top = 482.0
 offset_right = 999.0

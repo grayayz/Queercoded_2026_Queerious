@@ -28,7 +28,7 @@ func _on_jelly_pressed() -> void:
 func _on_starry_pressed() -> void:
 	diabox(3)
 	
-func _on_saturn_pressed() -> void:
+func _on_jupiter_pressed() -> void:
 	diabox(2)
 	
 func diabox(id):
@@ -36,5 +36,3 @@ func diabox(id):
 	dia.show()
 	dia.parse(dia.statements[id])
 	dia.type()
-
-	

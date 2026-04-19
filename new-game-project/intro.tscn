@@ -5,20 +5,17 @@
 [ext_resource type="Script" uid="uid://byghxgvk4ylid" path="res://Scripts/texthandler.gd" id="3_7a8ye"]
 [ext_resource type="Script" uid="uid://dkjpc4fxjv2d6" path="res://Scripts/character.gd" id="3_y72e6"]
 [ext_resource type="FontFile" uid="uid://dsbmx2cbf5h6j" path="res://Fonts/Monocraft.ttc" id="4_0a7ni"]
-[ext_resource type="Script" uid="uid://dvaf8qwxym1e2" path="res://Scripts/name_box.gd" id="6_u2rf6"]
+[ext_resource type="PackedScene" uid="uid://dtqxa7kquy1xq" path="res://Dialogue_Boxes/frog_dialogue_box.tscn" id="5_xsd0a"]
+[ext_resource type="PackedScene" uid="uid://qa8mudcoxwsp" path="res://Dialogue_Boxes/ghost_dialogue_box.tscn" id="6_smii7"]
+[ext_resource type="PackedScene" uid="uid://074q4bfj8c7n" path="res://Dialogue_Boxes/jupiters_dialogue_box.tscn" id="7_dmx7j"]
 [ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://Button_Properties/DEFAULT_BUTTON_THEME.tres" id="7_dpxxx"]
 [ext_resource type="Script" uid="uid://cd6oycs3t1b8a" path="res://Scripts/eureka.gd" id="7_y6ycx"]
+[ext_resource type="PackedScene" uid="uid://d17goq7lfjy63" path="res://Dialogue_Boxes/star_dialogue_box.tscn" id="8_pwhnr"]
 [ext_resource type="Script" uid="uid://7urtp2qhhrof" path="res://Scripts/whodunnit.gd" id="9_dk2oa"]
+[ext_resource type="PackedScene" uid="uid://b3ij278mggt8l" path="res://Dialogue_Boxes/jelly_dialogue_box.tscn" id="9_h770g"]
+[ext_resource type="PackedScene" uid="uid://cl3e4ckbvkidf" path="res://Dialogue_Boxes/standard_dialogue_box.tscn" id="10_qn042"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7a8ye"]
-font = ExtResource("4_0a7ni")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_0a7ni"]
-font = ExtResource("4_0a7ni")
-font_size = 25
-
-[sub_resource type="LabelSettings" id="LabelSettings_s2ta7"]
 font = ExtResource("4_0a7ni")
 font_size = 25
 
@@ -70,7 +67,7 @@ offset_bottom = -17.69909
 focus_mode = 0
 flat = true
 
-[node name="saturn" type="Button" parent="bg" unique_id=483136030]
+[node name="jupiter" type="Button" parent="bg" unique_id=483136030]
 offset_left = 119.79944
 offset_top = -61.061943
 offset_right = 248.81409
@@ -90,52 +87,24 @@ position = Vector2(-66.399994, -44.666668)
 script = ExtResource("3_y72e6")
 characters = Array[String](["res://Characters(Bigger)/Frog_Big.png", "res://Characters(Bigger)/Ghost_Big.png", "res://Characters(Bigger)/Saturn_Big.png", "res://Characters(Bigger)/Star_Big.png", "res://Characters(Bigger)/Jellyfish_Big.png"])
 
-[node name="dialogue_Box" type="ColorRect" parent="." unique_id=304244960]
-offset_left = -1.0
-offset_top = 476.0
-offset_right = 990.0
-offset_bottom = 695.0
-color = Color(0.47058824, 0.47058824, 0.47058824, 0.8)
+[node name="dialogue_Box" type="Control" parent="." unique_id=200637859]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 459.0
+offset_bottom = 459.0
 script = ExtResource("3_7a8ye")
 texts = Array[String](["res://Text/level1/intro.txt"])
-statements = Array[String](["res://Text/level1/frog.txt", "res://Text/level1/ghost.txt", "res://Text/level1/saturn.txt", "res://Text/level1/starry.txt", "res://Text/level1/jelly.txt"])
+statements = Array[String](["res://Text/level1/frog.txt", "res://Text/level1/ghost.txt", "res://Text/level1/jupiter.txt", "res://Text/level1/starry.txt", "res://Text/level1/jelly.txt"])
+boxes = Array[PackedScene]([ExtResource("5_xsd0a"), ExtResource("6_smii7"), ExtResource("7_dmx7j"), ExtResource("8_pwhnr"), ExtResource("9_h770g"), ExtResource("10_qn042")])
 
 [node name="dialogue" type="Label" parent="dialogue_Box" unique_id=40860070]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 8.0
-offset_right = 974.0
-offset_bottom = 159.0
+offset_left = 58.0
+offset_top = 49.0
+offset_right = 931.0
+offset_bottom = 176.0
 label_settings = SubResource("LabelSettings_7a8ye")
 autowrap_mode = 2
-
-[node name="name_box" type="ColorRect" parent="dialogue_Box" unique_id=1042687164]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -46.0
-offset_right = 215.0
-color = Color(0.47058824, 0.47058824, 0.47058824, 0.8)
-script = ExtResource("6_u2rf6")
-names = Array[String](["Frog", "Ghost", "Saturn", "Starry", "Jelly", ""])
-
-[node name="name" type="Label" parent="dialogue_Box/name_box" unique_id=2000991854]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 4.0
-offset_right = 225.0
-offset_bottom = 38.0
-text = "???"
-label_settings = SubResource("LabelSettings_0a7ni")
-horizontal_alignment = 1
-
-[node name="enter" type="Label" parent="dialogue_Box" unique_id=1107091643]
-layout_mode = 0
-offset_left = 590.0
-offset_top = 166.0
-offset_right = 973.0
-offset_bottom = 229.0
-text = "Press Enter to Continue"
-label_settings = SubResource("LabelSettings_s2ta7")
 
 [node name="EUREKA" type="Button" parent="." unique_id=1740551199]
 offset_left = 778.0
@@ -202,7 +171,7 @@ label_settings = SubResource("LabelSettings_dpxxx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="saturn" type="Button" parent="whodunnit" unique_id=1265264131]
+[node name="jupiter" type="Button" parent="whodunnit" unique_id=1265264131]
 layout_mode = 0
 offset_left = 55.0
 offset_top = 175.0
@@ -211,13 +180,13 @@ offset_bottom = 299.0
 focus_mode = 0
 theme = ExtResource("7_dpxxx")
 
-[node name="Label" type="Label" parent="whodunnit/saturn" unique_id=1532258235]
+[node name="Label" type="Label" parent="whodunnit/jupiter" unique_id=1532258235]
 layout_mode = 0
-offset_left = 12.0
+offset_left = -1.0
 offset_top = 19.0
-offset_right = 145.0
+offset_right = 162.0
 offset_bottom = 95.0
-text = "Saturn"
+text = "Jupiter"
 label_settings = SubResource("LabelSettings_dpxxx")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -267,8 +236,8 @@ vertical_alignment = 1
 [connection signal="pressed" from="bg/ghost" to="." method="_on_ghost_pressed"]
 [connection signal="pressed" from="bg/jelly" to="." method="_on_jelly_pressed"]
 [connection signal="pressed" from="bg/starry" to="." method="_on_starry_pressed"]
-[connection signal="pressed" from="bg/saturn" to="." method="_on_saturn_pressed"]
-[connection signal="charac_change" from="dialogue_Box" to="dialogue_Box/name_box" method="_on_charac_change"]
+[connection signal="pressed" from="bg/jupiter" to="." method="_on_jupiter_pressed"]
+[connection signal="charac_change" from="dialogue_Box" to="dialogue_Box" method="_on_charac_change"]
 [connection signal="do_something" from="dialogue_Box" to="." method="_on_do_something"]
 [connection signal="hidden" from="dialogue_Box" to="EUREKA" method="_on_dia_box_hidden"]
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]

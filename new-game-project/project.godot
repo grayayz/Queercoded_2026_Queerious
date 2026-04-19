@@ -24,6 +24,10 @@ Global="*uid://dr2gr03w86u7j"
 window/size/viewport_width=1000
 window/size/viewport_height=700
 
+[global_group]
+
+diabox=""
+
 [input]
 
 Enter={

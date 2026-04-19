@@ -8,5 +8,4 @@ func _on_dia_box_visibility_changed() -> void:
 	
 func _on_pressed() -> void:
 	var box = get_tree().root.find_child("dialogue_Box", true, false)
-	box.find_child("enter").hide()
 	box.show()
