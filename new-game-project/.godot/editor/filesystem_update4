@@ -1,3 +1,7 @@
 res://scene_1.tscn
 res://Button_Properties/DEFAULT_BUTTON_THEME.tres
 res://intro.tscn
+res://Text/level1/starry.txt
+res://Text/level1/intro.txt
+res://Scripts/character.gd
+res://Scripts/intro.gd

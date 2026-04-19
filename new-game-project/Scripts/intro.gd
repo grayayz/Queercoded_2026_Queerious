@@ -2,7 +2,7 @@ extends Node2D
 
 signal continue_text
 
-@onready var sprite = $character
+@onready var sprite =  $Marker2D/character
 @onready var dia = $dialogue_Box
 
 func _input(event: InputEvent) -> void:

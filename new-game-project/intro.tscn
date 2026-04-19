@@ -38,6 +38,7 @@ offset_left = 356.04718
 offset_top = 40.707962
 offset_right = 432.2832
 offset_bottom = 87.61061
+focus_mode = 0
 flat = true
 
 [node name="ghost" type="Button" parent="bg" unique_id=1865550450]
@@ -45,6 +46,7 @@ offset_left = -440.6607
 offset_top = 61.946877
 offset_right = -359.3982
 offset_bottom = 127.43363
+focus_mode = 0
 flat = true
 
 [node name="jelly" type="Button" parent="bg" unique_id=1081582319]
@@ -52,6 +54,7 @@ offset_left = -257.19174
 offset_top = -62.831856
 offset_right = -139.90558
 offset_bottom = 2.6548996
+focus_mode = 0
 flat = true
 
 [node name="starry" type="Button" parent="bg" unique_id=1739715299]
@@ -59,6 +62,7 @@ offset_left = -25.970478
 offset_top = -76.99114
 offset_right = 29.321545
 offset_bottom = -17.69909
+focus_mode = 0
 flat = true
 
 [node name="saturn" type="Button" parent="bg" unique_id=483136030]
@@ -66,6 +70,7 @@ offset_left = 119.79944
 offset_top = -61.061943
 offset_right = 248.81409
 offset_bottom = 46.017708
+focus_mode = 0
 flat = true
 
 [node name="white" type="ColorRect" parent="." unique_id=2022152455]
@@ -73,13 +78,14 @@ visible = false
 offset_right = 1190.0
 offset_bottom = 686.0
 
-[node name="character" type="Sprite2D" parent="." unique_id=771494097]
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1805243310]
+position = Vector2(497.99994, 335)
 scale = Vector2(7.5, 7.5)
+
+[node name="character" type="Sprite2D" parent="Marker2D" unique_id=771494097]
+position = Vector2(-66.399994, -44.666668)
 script = ExtResource("3_y72e6")
 characters = Array[String](["res://Art/Characters/Frog.png", "res://Art/Characters/Ghost.png", "res://Art/Characters/Saturn.png", "res://Art/Characters/Star.png", "res://Art/Characters/Jellyfish.png"])
-
-[node name="Marker2D" type="Marker2D" parent="character" unique_id=1805243310]
-position = Vector2(66.399994, 44.666668)
 
 [node name="dialogue_Box" type="ColorRect" parent="." unique_id=304244960]
 offset_left = -1.0
@@ -102,7 +108,7 @@ autowrap_mode = 2
 
 [node name="name_box" type="ColorRect" parent="dialogue_Box" unique_id=1042687164]
 layout_mode = 0
-offset_left = -8.0
+offset_left = 1.0
 offset_top = -46.0
 offset_right = 215.0
 color = Color(0.47058824, 0.47058824, 0.47058824, 0.8)
