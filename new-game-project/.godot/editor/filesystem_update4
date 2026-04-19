@@ -14,3 +14,9 @@ res://Button_Properties/NORMAL.tres
 res://Scripts/character.gd
 res://Scripts/eureka.gd
 res://Scripts/intro.gd
+res://Dialogue_Boxes/standard_dialogue_box.tscn
+res://Text/level1/frog.txt
+res://Text/level1/ghost.txt
+res://Text/level1/jelly.txt
+res://Text/level1/jupiter.txt
+res://Text/level1/starry.txt
