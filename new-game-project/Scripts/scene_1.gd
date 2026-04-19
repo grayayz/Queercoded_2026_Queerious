@@ -8,3 +8,7 @@ func _on_button_pressed() -> void:
 		$TitleScreen.modulate -= Color(0, 0, 0, 0.15)
 		await get_tree().create_timer(0.15).timeout
 	get_tree().change_scene_to_packed(the_game)
+
+
+func _on_title_button_pressed() -> void:
+		get_tree().change_scene_to_file("res://intro.tscn")
