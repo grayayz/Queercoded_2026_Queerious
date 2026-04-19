@@ -1,0 +1,3 @@
+REMINDERS FOR TEXT MARKUP
+| signifies that the number after it will designate the name in the name_box
+ex: |0 is Frog

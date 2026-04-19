@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://jq2o8xrisfb6" path="res://Art/title_screen.png" id="1_3xosi"]
 [ext_resource type="Script" uid="uid://bvpxx67pekq77" path="res://Scripts/scene_1.gd" id="1_knagl"]
 [ext_resource type="FontFile" uid="uid://b4tkflodhyvv" path="res://Fonts/bubble-font/Bubble-w10MZ.otf" id="2_1abo5"]
-[ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://DEFAULT_BUTTON_THEME.tres" id="4_knagl"]
+[ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://Button_Properties/DEFAULT_BUTTON_THEME.tres" id="4_knagl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_knagl"]
 font = ExtResource("2_1abo5")
