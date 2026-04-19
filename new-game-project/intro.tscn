@@ -29,8 +29,8 @@ font_size = 25
 script = ExtResource("1_ayt76")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1313267243]
-position = Vector2(502, 358.00003)
-scale = Vector2(0.99683106, 0.9964286)
+position = Vector2(503.7922, 359.125)
+scale = Vector2(1.0004154, 0.9996428)
 texture = ExtResource("2_y72e6")
 
 [node name="frog" type="Button" parent="bg" unique_id=1319419478]
@@ -129,10 +129,10 @@ text = "Press Enter to Continue"
 label_settings = SubResource("LabelSettings_s2ta7")
 
 [node name="EUREKA" type="Button" parent="." unique_id=1740551199]
-offset_left = 841.0
-offset_top = 63.0
-offset_right = 981.0
-offset_bottom = 165.0
+offset_left = 778.0
+offset_top = 56.0
+offset_right = 918.0
+offset_bottom = 158.0
 theme = ExtResource("7_dpxxx")
 script = ExtResource("7_y6ycx")
 
