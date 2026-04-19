@@ -1,7 +1,10 @@
-res://scene_1.tscn
-res://Button_Properties/DEFAULT_BUTTON_THEME.tres
 res://intro.tscn
-res://Text/level1/starry.txt
-res://Text/level1/intro.txt
-res://Scripts/character.gd
+res://Button_Properties/DEFAULT_BUTTON_THEME.tres
+res://whodunnit.tscn
+res://Scripts/whodunnit.gd
+res://Text/prompt.txt
+res://Scripts/eureka.gd
 res://Scripts/intro.gd
+res://Scripts/global.gd
+res://Dialogue_Properties/dialogue_box.tres
+res://Dialogue_Properties/inner_dialogue.tres

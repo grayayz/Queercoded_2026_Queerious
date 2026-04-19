@@ -6,8 +6,9 @@ signal continue_text
 @onready var dia = $dialogue_Box
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Enter") && Global.has_dialogue:
-		emit_signal("continue_text")
+	if Global.detective == false:
+		if event.is_action_pressed("Enter") && Global.has_dialogue:
+			emit_signal("continue_text")
 
 func _on_do_something() -> void:
 	for i in 10:

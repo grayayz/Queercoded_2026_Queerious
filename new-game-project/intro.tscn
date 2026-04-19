@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dvaf8qwxym1e2" path="res://Scripts/name_box.gd" id="6_u2rf6"]
 [ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://Button_Properties/DEFAULT_BUTTON_THEME.tres" id="7_dpxxx"]
 [ext_resource type="Script" uid="uid://cd6oycs3t1b8a" path="res://Scripts/eureka.gd" id="7_y6ycx"]
+[ext_resource type="Script" uid="uid://7urtp2qhhrof" path="res://Scripts/whodunnit.gd" id="9_dk2oa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7a8ye"]
 font = ExtResource("4_0a7ni")
@@ -24,6 +25,10 @@ font_size = 25
 [sub_resource type="LabelSettings" id="LabelSettings_u2rf6"]
 font = ExtResource("4_0a7ni")
 font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_dpxxx"]
+font = ExtResource("4_0a7ni")
+font_size = 35
 
 [node name="Node2D" type="Node2D" unique_id=227732098]
 script = ExtResource("1_ayt76")
@@ -74,18 +79,16 @@ focus_mode = 0
 flat = true
 
 [node name="white" type="ColorRect" parent="." unique_id=2022152455]
-visible = false
 offset_right = 1190.0
 offset_bottom = 686.0
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1805243310]
 position = Vector2(497.99994, 335)
-scale = Vector2(7.5, 7.5)
 
 [node name="character" type="Sprite2D" parent="Marker2D" unique_id=771494097]
 position = Vector2(-66.399994, -44.666668)
 script = ExtResource("3_y72e6")
-characters = Array[String](["res://Art/Characters/Frog.png", "res://Art/Characters/Ghost.png", "res://Art/Characters/Saturn.png", "res://Art/Characters/Star.png", "res://Art/Characters/Jellyfish.png"])
+characters = Array[String](["res://Characters(Bigger)/Frog_Big.png", "res://Characters(Bigger)/Ghost_Big.png", "res://Characters(Bigger)/Saturn_Big.png", "res://Characters(Bigger)/Star_Big.png", "res://Characters(Bigger)/Jellyfish_Big.png"])
 
 [node name="dialogue_Box" type="ColorRect" parent="." unique_id=304244960]
 offset_left = -1.0
@@ -151,6 +154,114 @@ offset_bottom = 67.0
 text = "EUREKA!"
 label_settings = SubResource("LabelSettings_u2rf6")
 
+[node name="whodunnit" type="Control" parent="." unique_id=1974310296]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("9_dk2oa")
+
+[node name="frog" type="Button" parent="whodunnit" unique_id=696966355]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 33.0
+offset_right = 212.0
+offset_bottom = 157.0
+focus_mode = 0
+theme = ExtResource("7_dpxxx")
+
+[node name="Label" type="Label" parent="whodunnit/frog" unique_id=388416346]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 95.0
+text = "Frog"
+label_settings = SubResource("LabelSettings_dpxxx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ghost" type="Button" parent="whodunnit" unique_id=1441893916]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 32.0
+offset_right = 396.0
+offset_bottom = 156.0
+focus_mode = 0
+theme = ExtResource("7_dpxxx")
+
+[node name="Label" type="Label" parent="whodunnit/ghost" unique_id=58514460]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 95.0
+text = "Ghost"
+label_settings = SubResource("LabelSettings_dpxxx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="saturn" type="Button" parent="whodunnit" unique_id=1265264131]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 175.0
+offset_right = 212.0
+offset_bottom = 299.0
+focus_mode = 0
+theme = ExtResource("7_dpxxx")
+
+[node name="Label" type="Label" parent="whodunnit/saturn" unique_id=1532258235]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 95.0
+text = "Saturn"
+label_settings = SubResource("LabelSettings_dpxxx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="starry" type="Button" parent="whodunnit" unique_id=2105583568]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 173.0
+offset_right = 397.0
+offset_bottom = 297.0
+focus_mode = 0
+theme = ExtResource("7_dpxxx")
+
+[node name="Label" type="Label" parent="whodunnit/starry" unique_id=31129590]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 24.0
+offset_right = 149.0
+offset_bottom = 100.0
+text = "Starry"
+label_settings = SubResource("LabelSettings_dpxxx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="jelly" type="Button" parent="whodunnit" unique_id=798957431]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 101.0
+offset_right = 577.0
+offset_bottom = 225.0
+focus_mode = 0
+theme = ExtResource("7_dpxxx")
+
+[node name="Label" type="Label" parent="whodunnit/jelly" unique_id=781854596]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 145.0
+offset_bottom = 95.0
+text = "Jelly"
+label_settings = SubResource("LabelSettings_dpxxx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="continue_text" from="." to="dialogue_Box" method="_on_continue_text"]
 [connection signal="pressed" from="bg/frog" to="." method="_on_frog_pressed"]
 [connection signal="pressed" from="bg/ghost" to="." method="_on_ghost_pressed"]
@@ -161,3 +272,5 @@ label_settings = SubResource("LabelSettings_u2rf6")
 [connection signal="do_something" from="dialogue_Box" to="." method="_on_do_something"]
 [connection signal="hidden" from="dialogue_Box" to="EUREKA" method="_on_dia_box_hidden"]
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]
+[connection signal="pressed" from="EUREKA" to="EUREKA" method="_on_pressed"]
+[connection signal="pressed" from="EUREKA" to="whodunnit" method="_on_eureka_pressed"]
