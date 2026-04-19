@@ -4,3 +4,5 @@ res://Dialogue_Properties/inner_dialogue.tres
 res://Dialogue_Properties/name_box.tres
 res://Dialogue_Properties/inner_name_box.tres
 res://Button_Properties/DEFAULT_BUTTON_THEME.tres
+res://Text/level2/intro.txt
+res://Dialogue_Boxes/jupiters_dialogue_box.tscn
