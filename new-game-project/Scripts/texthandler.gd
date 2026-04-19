@@ -5,7 +5,7 @@ extends Control
 @export var boxes : Array[PackedScene]
 
 var lines: Array
-var a = 0
+@export var a = 0
 
 var is_typing = false
 
@@ -23,6 +23,7 @@ func parse(textfile):
 	while !content.is_empty():
 		array.append(content)
 		content = file.get_line()
+		print(array)
 	lines = array
 	
 func type():

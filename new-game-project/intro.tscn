@@ -82,8 +82,11 @@ offset_bottom = 686.0
 [node name="dialogue_Box" type="Control" parent="." unique_id=200637859]
 layout_mode = 3
 anchors_preset = 0
-offset_top = 459.0
-offset_bottom = 459.0
+offset_left = 23.000002
+offset_top = 461.99997
+offset_right = 23.000002
+offset_bottom = 461.99997
+scale = Vector2(0.975, 0.975)
 script = ExtResource("3_7a8ye")
 texts = Array[String](["res://Text/level1/intro.txt"])
 statements = Array[String](["res://Text/level1/frog.txt", "res://Text/level1/ghost.txt", "res://Text/level1/jupiter.txt", "res://Text/level1/starry.txt", "res://Text/level1/jelly.txt"])
@@ -235,3 +238,8 @@ vertical_alignment = 1
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]
 [connection signal="pressed" from="EUREKA" to="EUREKA" method="_on_pressed"]
 [connection signal="pressed" from="EUREKA" to="whodunnit" method="_on_eureka_pressed"]
+[connection signal="pressed" from="whodunnit/frog" to="whodunnit" method="_on_wrong_pressed"]
+[connection signal="pressed" from="whodunnit/ghost" to="whodunnit" method="_on_wrong_pressed"]
+[connection signal="pressed" from="whodunnit/jupiter" to="whodunnit" method="_on_wrong_pressed"]
+[connection signal="pressed" from="whodunnit/starry" to="whodunnit" method="_on_right_pressed"]
+[connection signal="pressed" from="whodunnit/jelly" to="whodunnit" method="_on_wrong_pressed"]
