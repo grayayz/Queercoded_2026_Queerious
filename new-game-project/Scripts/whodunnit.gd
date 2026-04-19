@@ -28,3 +28,4 @@ func _on_right_pressed() -> void:
 	box.type()
 	hide()
 	right_side_button.queue_free()
+	Global.type = 1

@@ -6,8 +6,6 @@ signal continue_text
 
 @export var next : PackedScene
 
-@export var white : PackedScene
-
 func _ready() -> void:
 	Global.detective = false
 	Global.has_dialogue = true
@@ -22,7 +20,7 @@ func _on_do_something() -> void:
 	for i in 10:
 		$white.color -= Color(0,0,0,0.1)
 		await get_tree().create_timer(0.1).timeout
-	$white.queue_free()
+	$white.z_index = -3
 
 func _on_frog_pressed() -> void:
 	diabox(0, Global.type)
@@ -50,10 +48,8 @@ func diabox(id, type):
 		dia.type()
 
 func _on_next_pressed() -> void:
-	var fade = white.instantiate()
-	fade.color = Color(0,0,0,0)
-	add_child(fade)
+	$white.z_index = 1
 	for i in 10:
-		fade.color += Color(0,0,0,0.1)
+		$white.color += Color(0,0,0,0.1)
 		await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_packed(next)
