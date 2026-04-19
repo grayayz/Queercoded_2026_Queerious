@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cl3e4ckbvkidf"]
+
+[ext_resource type="Theme" uid="uid://b5fsmjewyqpxu" path="res://Dialogue_Properties/dialogue_box.tres" id="1_ej0x7"]
+[ext_resource type="Theme" uid="uid://cwjjrjtjbb7aj" path="res://Dialogue_Properties/inner_dialogue.tres" id="2_10xow"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6fab"]
+bg_color = Color(1, 0.97, 0.97, 0.7882353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="DialogueBox" type="Panel" unique_id=1315340624]
+offset_left = 8.0
+offset_top = 482.0
+offset_right = 999.0
+offset_bottom = 706.0
+theme = ExtResource("1_ej0x7")
+
+[node name="Inner_DialogueBox" type="Panel" parent="." unique_id=34559817]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 28.0
+offset_right = 974.0
+offset_bottom = 194.0
+theme = ExtResource("2_10xow")
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6fab")
+
+[node name="Label" type="Label" parent="." unique_id=1222884236]
+layout_mode = 0
+offset_left = 721.0
+offset_top = 196.0
+offset_right = 978.0
+offset_bottom = 221.0
+text = "Press Enter to Continue."
