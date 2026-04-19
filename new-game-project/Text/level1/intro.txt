@@ -2,8 +2,8 @@ Hello hello! What a lovely group of people we have today!
 *
 |0Welcome to Pride Club!
 |3Everyone else here has atended at least one pride meeting before today.
-|4I joined the club this semester, but I've already met at least 1 person here in-person before today
-|1I've never met Frog before, but I know evereyone else here
+|4I joined the club this semester, but I've already met at least 1 person here in-person before today.
+|1I've never met Frog before, but I know everyone else here.
 |2I've been to every Pride Club meeting before this!
 |0This is my first day here at Pride Club, and I only know Starry.
 |5...
@@ -11,3 +11,5 @@ Hello hello! What a lovely group of people we have today!
 |3I think one of us might have said a contradiction.
 |4But who?
 |5Who indeed? Can you figure it out?
+Click on the heads of the person who's statement you want to revisit.
+When you think you've figured it out, press the "EUREKA" button that will show up on the right side after you press Enter.
