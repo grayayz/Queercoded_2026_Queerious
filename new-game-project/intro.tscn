@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c8rt0senpqhib" path="res://Scripts/intro.gd" id="1_ayt76"]
 [ext_resource type="PackedScene" uid="uid://r6u3mmskvf7m" path="res://level2.tscn" id="2_smii7"]
-[ext_resource type="Texture2D" uid="uid://cgak3r8hr3531" path="res://Art/Background_1.png" id="2_xsd0a"]
 [ext_resource type="Script" uid="uid://byghxgvk4ylid" path="res://Scripts/texthandler.gd" id="3_7a8ye"]
 [ext_resource type="PackedScene" uid="uid://c2b02aanqp3l1" path="res://white.tscn" id="3_dmx7j"]
 [ext_resource type="FontFile" uid="uid://dsbmx2cbf5h6j" path="res://Fonts/Monocraft.ttc" id="4_0a7ni"]
+[ext_resource type="Texture2D" uid="uid://gvrjv5gpxobx" path="res://Art/Rough_Background_1-Recovered.png" id="4_7ufi4"]
 [ext_resource type="PackedScene" uid="uid://dtqxa7kquy1xq" path="res://Dialogue_Boxes/frog_dialogue_box.tscn" id="5_xsd0a"]
 [ext_resource type="PackedScene" uid="uid://qa8mudcoxwsp" path="res://Dialogue_Boxes/ghost_dialogue_box.tscn" id="6_smii7"]
 [ext_resource type="PackedScene" uid="uid://074q4bfj8c7n" path="res://Dialogue_Boxes/jupiters_dialogue_box.tscn" id="7_dmx7j"]
@@ -42,7 +42,7 @@ white = ExtResource("3_dmx7j")
 z_index = -2
 position = Vector2(505.39615, 340.0625)
 scale = Vector2(1.0132078, 1.01125)
-texture = ExtResource("2_xsd0a")
+texture = ExtResource("4_7ufi4")
 
 [node name="frog" type="Button" parent="bg" unique_id=1319419478]
 offset_left = 356.04718
