@@ -27,7 +27,7 @@ offset_left = 597.0
 offset_top = 194.0
 offset_right = 982.0
 offset_bottom = 219.0
-text = "Click, Space, or  Enter to Continue."
+text = "Press Space or Enter to Continue."
 
 [node name="Name_Box" type="Panel" parent="." unique_id=2049812391]
 layout_mode = 0

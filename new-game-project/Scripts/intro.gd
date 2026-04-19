@@ -4,8 +4,15 @@ signal continue_text
 
 @onready var dia = $dialogue_Box
 
-var next : PackedScene = load("res://level2.tscn")
+@export var next : PackedScene
 
+@export var white : PackedScene
+
+func _ready() -> void:
+	Global.detective = false
+	Global.has_dialogue = true
+	Global.type = -1
+	
 func _input(event: InputEvent) -> void:
 	if Global.detective == false:
 		if event.is_action_pressed("Enter") && Global.has_dialogue:
@@ -43,4 +50,10 @@ func diabox(id, type):
 		dia.type()
 
 func _on_next_pressed() -> void:
+	var fade = white.instantiate()
+	fade.color = Color(0,0,0,0)
+	add_child(fade)
+	for i in 10:
+		fade.color += Color(0,0,0,0.1)
+		await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_packed(next)

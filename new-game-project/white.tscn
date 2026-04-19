@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2b02aanqp3l1"]
+
+[node name="white" type="ColorRect" unique_id=22345551]
+visible = false
+offset_right = 1190.0
+offset_bottom = 686.0

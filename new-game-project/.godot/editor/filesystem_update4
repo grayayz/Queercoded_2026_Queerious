@@ -17,3 +17,9 @@ res://Text/level1/bonus/jupiter.txt
 res://Text/level1/bonus/jelly.txt
 res://level2.tscn
 res://Text/level2/intro.txt
+res://credits.tscn
+res://Scripts/intro.gd
+res://Scripts/whodunnit.gd
+res://Scripts/next.gd
+res://Scripts/eureka.gd
+res://Scripts/texthandler.gd
