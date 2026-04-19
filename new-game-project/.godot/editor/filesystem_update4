@@ -1,7 +1,2 @@
-res://Scripts/texthandler.gd
-res://Text/intro.txt
-res://scene_1.tscn
-res://new_theme.tres
-res://DEFAULT_BUTTON_THEME.tres
-res://Button_Properties/HOVER.tres
-res://Button_Properties/NORMAL.tres
+res://intro.tscn
+res://Button_Properties/DEFAULT_BUTTON_THEME.tres

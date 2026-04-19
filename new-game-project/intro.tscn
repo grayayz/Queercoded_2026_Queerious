@@ -142,13 +142,10 @@ offset_bottom = 67.0
 text = "EUREKA!"
 label_settings = SubResource("LabelSettings_u2rf6")
 
-[connection signal="continue_text" from="." to="dialogue_Box" method="_on_continue_text"]
 [connection signal="pressed" from="bg/frog" to="." method="_on_frog_pressed"]
 [connection signal="pressed" from="bg/ghost" to="." method="_on_ghost_pressed"]
 [connection signal="pressed" from="bg/jelly" to="." method="_on_jelly_pressed"]
 [connection signal="pressed" from="bg/starry" to="." method="_on_starry_pressed"]
 [connection signal="pressed" from="bg/saturn" to="." method="_on_saturn_pressed"]
-[connection signal="charac_change" from="dialogue_Box" to="dialogue_Box/name_box" method="_on_charac_change"]
-[connection signal="do_something" from="dialogue_Box" to="." method="_on_do_something"]
 [connection signal="hidden" from="dialogue_Box" to="EUREKA" method="_on_dia_box_hidden"]
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]
