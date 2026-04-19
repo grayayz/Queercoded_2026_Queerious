@@ -54,10 +54,18 @@ func type():
 		$dialogue.text = ""
 		hide()
 		a = 0
+
 func _on_continue_text() -> void:
-	if is_typing == false:
-		type()
-		
+	
+	# If still typing → SKIP
+	if is_typing:
+		is_typing = false
+		$dialogue.text = full_line
+		char_index = full_line.length()
+		return
+	
+	type()
+
 func contains(line):
 	if line[0] == "|":
 		emit_signal("charac_change", line[1])
@@ -80,7 +88,10 @@ func _on_charac_change(id: Variant) -> void:
 	$dialogue.move_to_front()
 
 func typewriter():
-	while char_index < full_line.length():
+	while char_index < full_line.length():	
+		if not is_typing:
+			$dialogue.text = full_line
+			return
 		$dialogue.text += full_line[char_index]
 		char_index += 1
-		await get_tree().create_timer(typing_speed).timeout		
+		await get_tree().create_timer(typing_speed).timeout
