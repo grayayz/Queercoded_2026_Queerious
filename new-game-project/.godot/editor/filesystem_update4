@@ -18,3 +18,4 @@ res://Dialogue_Boxes/frog_dialogue_box.tscn
 res://Dialogue_Boxes/star_dialogue_box.tscn
 res://Dialogue_Boxes/jelly_dialogue_box.tscn
 res://Dialogue_Boxes/ghost_dialogue_box.tscn
+res://Scripts/whodunnit.gd

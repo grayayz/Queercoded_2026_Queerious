@@ -8,7 +8,7 @@ var full_line = ""
 var char_index = 0
 var typing_speed = 0.02
 var lines: Array
-var a = 0
+@export var a = 0
 
 var is_typing = false
 
@@ -20,6 +20,7 @@ func _ready() -> void:
 	type()
 
 func parse(textfile):
+	a = 0
 	var file = FileAccess.open(textfile, FileAccess.READ)
 	var content = file.get_line()
 	var array: Array
@@ -69,9 +70,9 @@ func contains(line):
 
 func _on_charac_change(id: Variant) -> void:
 	var children = get_children()
-	for a in children:
-		if a.is_in_group("diabox"):
-			a.queue_free()
+	for c in children:
+		if c.is_in_group("diabox"):
+			c.queue_free()
 	var node = boxes[str_to_var(id)].instantiate()
 	add_child(node)
 	node.global_position = global_position
