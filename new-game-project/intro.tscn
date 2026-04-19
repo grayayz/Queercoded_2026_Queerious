@@ -36,8 +36,8 @@ script = ExtResource("1_ayt76")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1313267243]
 z_index = -2
-position = Vector2(503.7922, 359.125)
-scale = Vector2(1.0004154, 0.9996428)
+position = Vector2(505.39615, 340.0625)
+scale = Vector2(1.0132078, 1.01125)
 texture = ExtResource("2_xsd0a")
 
 [node name="frog" type="Button" parent="bg" unique_id=1319419478]
@@ -81,6 +81,7 @@ focus_mode = 0
 flat = true
 
 [node name="white" type="ColorRect" parent="." unique_id=2022152455]
+visible = false
 offset_right = 1190.0
 offset_bottom = 686.0
 
