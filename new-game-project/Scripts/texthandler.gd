@@ -4,6 +4,9 @@ extends Control
 @export var statements : Array[String]
 @export var boxes : Array[PackedScene]
 
+var full_line = ""
+var char_index = 0
+var typing_speed = 0.02
 var lines: Array
 var a = 0
 
@@ -29,21 +32,27 @@ func type():
 	if a < lines.size():
 		Global.has_dialogue = true
 		is_typing = true
+		
 		if lines[a] == "*":
 			emit_signal("do_something")
 			a += 1
 			type()
-		else:
-			lines[a] = contains(lines[a])
-			$dialogue.text = lines[a]
-			a += 1
+			return
+		
+		lines[a] = contains(lines[a])
+		full_line = lines[a]
+		char_index = 0
+		$dialogue.text = ""
+		
+		await typewriter()
+		
+		a += 1
 		is_typing = false
 	else:
 		Global.has_dialogue = false
 		$dialogue.text = ""
 		hide()
 		a = 0
-
 func _on_continue_text() -> void:
 	if is_typing == false:
 		type()
@@ -69,4 +78,8 @@ func _on_charac_change(id: Variant) -> void:
 	node.owner = self
 	$dialogue.move_to_front()
 
-		
+func typewriter():
+	while char_index < full_line.length():
+		$dialogue.text += full_line[char_index]
+		char_index += 1
+		await get_tree().create_timer(typing_speed).timeout		
