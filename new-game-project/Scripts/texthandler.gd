@@ -3,6 +3,7 @@ extends Control
 @export var texts : Array[String] 
 @export var statements : Array[String]
 @export var boxes : Array[PackedScene]
+@export var bonus : Array[String]
 
 var full_line = ""
 var char_index = 0
@@ -14,6 +15,7 @@ var is_typing = false
 
 signal do_something
 signal charac_change(id)
+signal level_over
 
 func _ready() -> void:
 	parse(texts[0])
@@ -33,7 +35,7 @@ func type():
 	if a < lines.size():
 		Global.has_dialogue = true
 		is_typing = true
-		
+
 		if lines[a] == "*":
 			emit_signal("do_something")
 			a += 1
@@ -45,10 +47,13 @@ func type():
 		char_index = 0
 		$dialogue.text = ""
 		
+		if lines[a].contains("COMPLETE"):
+			emit_signal("level_over")
+		a += 1
 		await typewriter()
 		
-		a += 1
 		is_typing = false
+		
 	else:
 		Global.has_dialogue = false
 		$dialogue.text = ""

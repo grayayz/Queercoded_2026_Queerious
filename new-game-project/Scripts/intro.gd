@@ -4,6 +4,8 @@ signal continue_text
 
 @onready var dia = $dialogue_Box
 
+var next : PackedScene = load("res://level2.tscn")
+
 func _input(event: InputEvent) -> void:
 	if Global.detective == false:
 		if event.is_action_pressed("Enter") && Global.has_dialogue:
@@ -16,22 +18,29 @@ func _on_do_something() -> void:
 	$white.queue_free()
 
 func _on_frog_pressed() -> void:
-	diabox(0)
+	diabox(0, Global.type)
 
 func _on_ghost_pressed() -> void:
-	diabox(1)
+	diabox(1, Global.type)
 	
 func _on_jelly_pressed() -> void:
-	diabox(4)
+	diabox(4, Global.type)
 
 func _on_starry_pressed() -> void:
-	diabox(3)
+	diabox(3, Global.type)
 	
 func _on_jupiter_pressed() -> void:
-	diabox(2)
+	diabox(2, Global.type)
 	
-func diabox(id):
-	dia.a = 0
-	dia.show()
-	dia.parse(dia.statements[id])
-	dia.type()
+func diabox(id, type):
+	if type != -1:
+		dia.a = 0
+		dia.show()
+		if type == 0:
+			dia.parse(dia.statements[id])
+		else:
+			dia.parse(dia.bonus[id])
+		dia.type()
+
+func _on_next_pressed() -> void:
+	get_tree().change_scene_to_packed(next)
