@@ -6,6 +6,8 @@ signal continue_text
 
 @export var next : PackedScene
 
+var pressed = false
+
 func _ready() -> void:
 	Global.detective = false
 	Global.has_dialogue = true
@@ -48,8 +50,10 @@ func diabox(id, type):
 		dia.type()
 
 func _on_next_pressed() -> void:
-	$white.z_index = 1
-	for i in 10:
-		$white.color += Color(0,0,0,0.1)
-		await get_tree().create_timer(0.1).timeout
-	get_tree().change_scene_to_packed(next)
+	if pressed == false:
+		pressed = true
+		$white.z_index = 1
+		for i in 10:
+			$white.color += Color(0,0,0,0.1)
+			await get_tree().create_timer(0.1).timeout
+		get_tree().change_scene_to_packed(next)
