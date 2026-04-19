@@ -14,3 +14,7 @@ res://Button_Properties/NORMAL.tres
 res://Scripts/character.gd
 res://Scripts/eureka.gd
 res://Scripts/intro.gd
+res://Dialogue_Boxes/frog_dialogue_box.tscn
+res://Dialogue_Boxes/star_dialogue_box.tscn
+res://Dialogue_Boxes/jelly_dialogue_box.tscn
+res://Dialogue_Boxes/ghost_dialogue_box.tscn
