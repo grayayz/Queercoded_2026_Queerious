@@ -8,6 +8,8 @@ var a = 0
 var is_typing = false
 
 signal do_something
+signal charac_change(id, lr)
+
 
 func _ready() -> void:
 	parse(texts[0])
@@ -31,15 +33,27 @@ func type():
 			a += 1
 			type()
 		else:
+			lines[a] = contains(lines[a])
 			$dialogue.text = lines[a]
 			a += 1
 		is_typing = false
 	else:
 		$dialogue.text = ""
-		get_parent_control().get_parent_control().hide()
+		hide()
 		a = 0
-
 
 func _on_continue_text() -> void:
 	if is_typing == false:
 		type()
+		
+func contains(line):
+	if line[0] == "/":
+		emit_signal("charac_change", line[1], line[2])
+		var gather: String = ""
+		for i in range(3, len(line)):
+			gather += line[i]
+		return gather
+		
+		
+	else:
+		return line

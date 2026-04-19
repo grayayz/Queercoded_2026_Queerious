@@ -1,6 +1,2 @@
-res://scene_1.tscn
 res://intro.tscn
-res://Scripts/scene_1.gd
-res://Scripts/intro.gd
-res://Text/intro.txt
-res://Scripts/texthandler.gd
+res://Scripts/character.gd
