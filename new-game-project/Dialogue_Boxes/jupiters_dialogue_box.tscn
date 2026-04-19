@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://cwjjrjtjbb7aj" path="res://Dialogue_Properties/inner_dialogue.tres" id="2_vgkq0"]
 [ext_resource type="Theme" uid="uid://dj3n5xdd3yxg6" path="res://Dialogue_Properties/name_box.tres" id="3_uperx"]
 [ext_resource type="Theme" uid="uid://7a3knkxlslb4" path="res://Dialogue_Properties/inner_name_box.tres" id="4_r6amx"]
-[ext_resource type="Texture2D" uid="uid://chd4ynvtpcnvj" path="res://Art/Characters(Bigger)/Saturn_Big.png" id="5_ov0ot"]
+[ext_resource type="Texture2D" uid="uid://chd4ynvtpcnvj" path="res://Characters(Bigger)/Saturn_Big.png" id="5_ov0ot"]
 
 [node name="DialogueBox" type="Panel" unique_id=1315340624 groups=["diabox"]]
 offset_left = 8.0
@@ -23,11 +23,11 @@ theme = ExtResource("2_vgkq0")
 
 [node name="Label" type="Label" parent="." unique_id=1222884236]
 layout_mode = 0
-offset_left = 721.0
-offset_top = 196.0
-offset_right = 978.0
-offset_bottom = 221.0
-text = "Press Enter to Continue."
+offset_left = 597.0
+offset_top = 194.0
+offset_right = 982.0
+offset_bottom = 219.0
+text = "Click, Space, or  Enter to Continue."
 
 [node name="Name_Box" type="Panel" parent="." unique_id=2049812391]
 layout_mode = 0

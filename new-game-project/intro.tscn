@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://7urtp2qhhrof" path="res://Scripts/whodunnit.gd" id="9_dk2oa"]
 [ext_resource type="PackedScene" uid="uid://b3ij278mggt8l" path="res://Dialogue_Boxes/jelly_dialogue_box.tscn" id="9_h770g"]
 [ext_resource type="PackedScene" uid="uid://cl3e4ckbvkidf" path="res://Dialogue_Boxes/standard_dialogue_box.tscn" id="10_qn042"]
+[ext_resource type="Script" uid="uid://dgmx105euk0jk" path="res://Scripts/next.gd" id="14_xsd0a"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7a8ye"]
 font = ExtResource("4_0a7ni")
@@ -25,6 +26,10 @@ font_size = 25
 [sub_resource type="LabelSettings" id="LabelSettings_dpxxx"]
 font = ExtResource("4_0a7ni")
 font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_wby50"]
+font = ExtResource("4_0a7ni")
+font_size = 25
 
 [node name="Node2D" type="Node2D" unique_id=227732098]
 script = ExtResource("1_ayt76")
@@ -227,6 +232,24 @@ label_settings = SubResource("LabelSettings_dpxxx")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="next" type="Button" parent="." unique_id=1762727703]
+visible = false
+offset_left = 336.0
+offset_top = 71.0
+offset_right = 684.0
+offset_bottom = 142.0
+theme = ExtResource("7_dpxxx")
+script = ExtResource("14_xsd0a")
+
+[node name="Label" type="Label" parent="next" unique_id=471412836]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 15.0
+offset_right = 315.0
+offset_bottom = 53.0
+text = "Move to Next Week"
+label_settings = SubResource("LabelSettings_wby50")
+
 [connection signal="continue_text" from="." to="dialogue_Box" method="_on_continue_text"]
 [connection signal="pressed" from="bg/frog" to="." method="_on_frog_pressed"]
 [connection signal="pressed" from="bg/ghost" to="." method="_on_ghost_pressed"]
@@ -236,6 +259,7 @@ vertical_alignment = 1
 [connection signal="charac_change" from="dialogue_Box" to="dialogue_Box" method="_on_charac_change"]
 [connection signal="do_something" from="dialogue_Box" to="." method="_on_do_something"]
 [connection signal="hidden" from="dialogue_Box" to="EUREKA" method="_on_dia_box_hidden"]
+[connection signal="level_over" from="dialogue_Box" to="next" method="_on_level_over"]
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]
 [connection signal="pressed" from="EUREKA" to="EUREKA" method="_on_pressed"]
 [connection signal="pressed" from="EUREKA" to="whodunnit" method="_on_eureka_pressed"]
@@ -244,3 +268,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="whodunnit/jupiter" to="whodunnit" method="_on_wrong_pressed"]
 [connection signal="pressed" from="whodunnit/starry" to="whodunnit" method="_on_right_pressed"]
 [connection signal="pressed" from="whodunnit/jelly" to="whodunnit" method="_on_wrong_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
