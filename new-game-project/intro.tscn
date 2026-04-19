@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dkjpc4fxjv2d6" path="res://Scripts/character.gd" id="3_y72e6"]
 [ext_resource type="FontFile" uid="uid://dsbmx2cbf5h6j" path="res://Fonts/Monocraft.ttc" id="4_0a7ni"]
 [ext_resource type="Script" uid="uid://dvaf8qwxym1e2" path="res://Scripts/name_box.gd" id="6_u2rf6"]
+[ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://Button_Properties/DEFAULT_BUTTON_THEME.tres" id="7_dpxxx"]
 [ext_resource type="Script" uid="uid://cd6oycs3t1b8a" path="res://Scripts/eureka.gd" id="7_y6ycx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7a8ye"]
@@ -28,8 +29,8 @@ font_size = 25
 script = ExtResource("1_ayt76")
 
 [node name="bg" type="Sprite2D" parent="." unique_id=1313267243]
-position = Vector2(592, 391)
-scale = Vector2(1.193662, 1.13)
+position = Vector2(502, 358.00003)
+scale = Vector2(0.99683106, 0.9964286)
 texture = ExtResource("2_y72e6")
 
 [node name="frog" type="Button" parent="bg" unique_id=1319419478]
@@ -68,6 +69,7 @@ offset_bottom = 46.017708
 flat = true
 
 [node name="white" type="ColorRect" parent="." unique_id=2022152455]
+visible = false
 offset_right = 1190.0
 offset_bottom = 686.0
 
@@ -77,12 +79,13 @@ script = ExtResource("3_y72e6")
 characters = Array[String](["res://Art/Characters/Frog.png", "res://Art/Characters/Ghost.png", "res://Art/Characters/Saturn.png", "res://Art/Characters/Star.png", "res://Art/Characters/Jellyfish.png"])
 
 [node name="Marker2D" type="Marker2D" parent="character" unique_id=1805243310]
-position = Vector2(79.2, 44.133335)
+position = Vector2(66.399994, 44.666668)
 
 [node name="dialogue_Box" type="ColorRect" parent="." unique_id=304244960]
-offset_top = 428.0
-offset_right = 1160.0
-offset_bottom = 647.0
+offset_left = -1.0
+offset_top = 476.0
+offset_right = 990.0
+offset_bottom = 695.0
 color = Color(0.47058824, 0.47058824, 0.47058824, 0.8)
 script = ExtResource("3_7a8ye")
 texts = Array[String](["res://Text/level1/intro.txt"])
@@ -90,10 +93,10 @@ statements = Array[String](["res://Text/level1/frog.txt", "res://Text/level1/gho
 
 [node name="dialogue" type="Label" parent="dialogue_Box" unique_id=40860070]
 layout_mode = 0
-offset_left = 14.0
-offset_top = 3.0
-offset_right = 1065.0
-offset_bottom = 213.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 974.0
+offset_bottom = 159.0
 label_settings = SubResource("LabelSettings_7a8ye")
 autowrap_mode = 2
 
@@ -118,19 +121,19 @@ horizontal_alignment = 1
 
 [node name="enter" type="Label" parent="dialogue_Box" unique_id=1107091643]
 layout_mode = 0
-offset_left = 754.0
-offset_top = 171.0
-offset_right = 1137.0
-offset_bottom = 234.0
+offset_left = 590.0
+offset_top = 166.0
+offset_right = 973.0
+offset_bottom = 229.0
 text = "Press Enter to Continue"
 label_settings = SubResource("LabelSettings_s2ta7")
 
 [node name="EUREKA" type="Button" parent="." unique_id=1740551199]
-visible = false
-offset_left = 999.0
-offset_top = 60.0
-offset_right = 1139.0
-offset_bottom = 162.0
+offset_left = 841.0
+offset_top = 63.0
+offset_right = 981.0
+offset_bottom = 165.0
+theme = ExtResource("7_dpxxx")
 script = ExtResource("7_y6ycx")
 
 [node name="Label" type="Label" parent="EUREKA" unique_id=290834503]
@@ -142,10 +145,13 @@ offset_bottom = 67.0
 text = "EUREKA!"
 label_settings = SubResource("LabelSettings_u2rf6")
 
+[connection signal="continue_text" from="." to="dialogue_Box" method="_on_continue_text"]
 [connection signal="pressed" from="bg/frog" to="." method="_on_frog_pressed"]
 [connection signal="pressed" from="bg/ghost" to="." method="_on_ghost_pressed"]
 [connection signal="pressed" from="bg/jelly" to="." method="_on_jelly_pressed"]
 [connection signal="pressed" from="bg/starry" to="." method="_on_starry_pressed"]
 [connection signal="pressed" from="bg/saturn" to="." method="_on_saturn_pressed"]
+[connection signal="charac_change" from="dialogue_Box" to="dialogue_Box/name_box" method="_on_charac_change"]
+[connection signal="do_something" from="dialogue_Box" to="." method="_on_do_something"]
 [connection signal="hidden" from="dialogue_Box" to="EUREKA" method="_on_dia_box_hidden"]
 [connection signal="visibility_changed" from="dialogue_Box" to="EUREKA" method="_on_dia_box_visibility_changed"]

@@ -1,3 +1,3 @@
 extends Node
 
-var has_dialogue = false
+var has_dialogue = true

@@ -40,3 +40,5 @@ offset_right = 19.842113
 offset_bottom = 112.69252
 theme = ExtResource("4_knagl")
 text = "PLAY"
+
+[connection signal="pressed" from="TitleScreen/Button" to="." method="_on_button_pressed"]
