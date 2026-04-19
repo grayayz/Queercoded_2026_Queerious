@@ -4,6 +4,8 @@ var text = "res://Text/prompt.txt"
 var wrong = "res://Text/wrong.txt"
 @export var progress : String
 
+@onready var right_side_button = $"../EUREKA"
+
 func _on_eureka_pressed() -> void:
 	show()
 	Global.detective = true
@@ -25,3 +27,4 @@ func _on_right_pressed() -> void:
 	box.parse(progress)
 	box.type()
 	hide()
+	right_side_button.queue_free()

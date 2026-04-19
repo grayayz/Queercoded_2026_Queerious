@@ -31,6 +31,7 @@ func _on_jupiter_pressed() -> void:
 	diabox(2)
 	
 func diabox(id):
+	dia.a = 0
 	dia.show()
 	dia.parse(dia.statements[id])
 	dia.type()
