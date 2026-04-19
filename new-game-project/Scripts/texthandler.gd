@@ -44,7 +44,7 @@ func type():
 		a = 0
 
 func _on_continue_text() -> void:
-	if is_typing == false && Global.has_dialogue:
+	if is_typing == false:
 		type()
 		
 func contains(line):
