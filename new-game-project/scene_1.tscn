@@ -1,14 +1,9 @@
 [gd_scene format=3 uid="uid://du6t5w4e6pg3m"]
 
-[ext_resource type="Texture2D" uid="uid://jq2o8xrisfb6" path="res://Art/title_screen.png" id="1_3xosi"]
 [ext_resource type="Script" uid="uid://bvpxx67pekq77" path="res://Scripts/scene_1.gd" id="1_knagl"]
 [ext_resource type="FontFile" uid="uid://b4tkflodhyvv" path="res://Fonts/bubble-font/Bubble-w10MZ.otf" id="2_1abo5"]
+[ext_resource type="Texture2D" uid="uid://ch67xf14x3jal" path="res://Art/title_screen_photo.png" id="2_knagl"]
 [ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://Button_Properties/DEFAULT_BUTTON_THEME.tres" id="4_knagl"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_knagl"]
-font = ExtResource("2_1abo5")
-font_size = 80
-font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" unique_id=725724431]
 script = ExtResource("1_knagl")
@@ -19,26 +14,26 @@ offset_top = -37.0
 offset_right = 1223.0
 offset_bottom = 713.0
 
-[node name="TitleScreen" type="Sprite2D" parent="." unique_id=694571072]
-visibility_layer = 513
-position = Vector2(550, 349)
-scale = Vector2(2.4190974, 2.5928242)
-texture = ExtResource("1_3xosi")
+[node name="TitleScreenPhoto" type="Sprite2D" parent="." unique_id=763722787]
+position = Vector2(496, 349)
+texture = ExtResource("2_knagl")
 
-[node name="title" type="Label" parent="TitleScreen" unique_id=1691204678]
-offset_left = -200.47212
-offset_top = -37.081547
-offset_right = 158.52788
-offset_bottom = 42.918453
-text = "Queerious"
-label_settings = SubResource("LabelSettings_knagl")
-
-[node name="title_button" type="Button" parent="TitleScreen" unique_id=791148537]
-offset_left = -61.59322
-offset_top = 83.69252
-offset_right = 19.842113
-offset_bottom = 112.69252
+[node name="title_button" type="Button" parent="TitleScreenPhoto" unique_id=791148537]
+offset_left = -103.0
+offset_top = 210.0
+offset_right = 76.0
+offset_bottom = 255.0
 theme = ExtResource("4_knagl")
 text = "PLAY"
 
-[connection signal="pressed" from="TitleScreen/title_button" to="." method="_on_title_button_pressed"]
+[node name="Label" type="Label" parent="TitleScreenPhoto" unique_id=398866323]
+offset_left = -342.0
+offset_top = -57.0
+offset_right = 349.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1abo5")
+theme_override_font_sizes/font_size = 154
+text = "QUEERIOUS"
+
+[connection signal="pressed" from="TitleScreenPhoto/title_button" to="." method="_on_title_button_pressed"]

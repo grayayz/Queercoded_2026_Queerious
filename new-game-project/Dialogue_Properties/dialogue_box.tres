@@ -1,0 +1,14 @@
+[gd_resource type="Theme" format=3 uid="uid://b5fsmjewyqpxu"]
+
+[ext_resource type="FontFile" uid="uid://dsbmx2cbf5h6j" path="res://Fonts/Monocraft.ttc" id="1_tymnu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qb4bf"]
+bg_color = Color(0.09, 0.019800004, 0.019800004, 0.7882353)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+default_font = ExtResource("1_tymnu")
+Panel/fonts/Press_Enter_to_Continue_ = ExtResource("1_tymnu")
+Panel/styles/panel = SubResource("StyleBoxFlat_qb4bf")
