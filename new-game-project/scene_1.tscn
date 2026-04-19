@@ -3,15 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://jq2o8xrisfb6" path="res://Art/title_screen.png" id="1_3xosi"]
 [ext_resource type="Script" uid="uid://bvpxx67pekq77" path="res://Scripts/scene_1.gd" id="1_knagl"]
 [ext_resource type="FontFile" uid="uid://b4tkflodhyvv" path="res://Fonts/bubble-font/Bubble-w10MZ.otf" id="2_1abo5"]
-[ext_resource type="Texture2D" uid="uid://hy4gx1cd7e5c" path="res://Art/circle.png" id="3_1abo5"]
+[ext_resource type="Theme" uid="uid://b5okatbrhlair" path="res://DEFAULT_BUTTON_THEME.tres" id="4_knagl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_knagl"]
 font = ExtResource("2_1abo5")
 font_size = 80
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_kl852"]
-font_size = 50
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" unique_id=725724431]
@@ -24,8 +20,9 @@ offset_right = 1223.0
 offset_bottom = 713.0
 
 [node name="TitleScreen" type="Sprite2D" parent="." unique_id=694571072]
-position = Vector2(621.00006, 323)
-scale = Vector2(2.588889, 2.588889)
+visibility_layer = 513
+position = Vector2(550, 349)
+scale = Vector2(2.4190974, 2.5928242)
 texture = ExtResource("1_3xosi")
 
 [node name="Label" type="Label" parent="TitleScreen" unique_id=1691204678]
@@ -36,24 +33,10 @@ offset_bottom = 42.918453
 text = "Queerious"
 label_settings = SubResource("LabelSettings_knagl")
 
-[node name="Circle" type="Sprite2D" parent="TitleScreen" unique_id=1006953261]
-position = Vector2(-11.201737, 80.34335)
-scale = Vector2(0.3862661, 0.3862661)
-texture = ExtResource("3_1abo5")
-
-[node name="Label2" type="Label" parent="TitleScreen/Circle" unique_id=2016907751]
-offset_left = -67.0
-offset_top = -12.0
-offset_right = 51.0
-offset_bottom = 57.0
-text = "Play"
-label_settings = SubResource("LabelSettings_kl852")
-
-[node name="Button" type="Button" parent="TitleScreen/Circle" unique_id=841399441]
-offset_left = -114.0
-offset_top = -39.0
-offset_right = 85.0
-offset_bottom = 87.0
-flat = true
-
-[connection signal="pressed" from="TitleScreen/Circle/Button" to="." method="_on_button_pressed"]
+[node name="Button" type="Button" parent="TitleScreen" unique_id=791148537]
+offset_left = -61.59322
+offset_top = 83.69252
+offset_right = 19.842113
+offset_bottom = 112.69252
+theme = ExtResource("4_knagl")
+text = "PLAY"
