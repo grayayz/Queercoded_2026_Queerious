@@ -28,8 +28,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_h6fab")
 
 [node name="Label" type="Label" parent="." unique_id=1222884236]
 layout_mode = 0
-offset_left = 721.0
-offset_top = 196.0
+offset_left = 593.0
+offset_top = 195.0
 offset_right = 978.0
-offset_bottom = 221.0
-text = "Press Enter to Continue."
+offset_bottom = 220.0
+text = "Click, Space, or  Enter to Continue."

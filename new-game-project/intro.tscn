@@ -81,7 +81,6 @@ focus_mode = 0
 flat = true
 
 [node name="white" type="ColorRect" parent="." unique_id=2022152455]
-visible = false
 offset_right = 1190.0
 offset_bottom = 686.0
 
