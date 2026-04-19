@@ -125,6 +125,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("9_dk2oa")
+progress = "res://Text/level1/solution.txt"
 
 [node name="frog" type="Button" parent="whodunnit" unique_id=696966355]
 layout_mode = 0

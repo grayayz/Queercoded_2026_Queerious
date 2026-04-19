@@ -7,3 +7,4 @@ res://Button_Properties/DEFAULT_BUTTON_THEME.tres
 res://Scripts/texthandler.gd
 res://Scripts/whodunnit.gd
 res://Scripts/eureka.gd
+res://Text/level1/solution.txt

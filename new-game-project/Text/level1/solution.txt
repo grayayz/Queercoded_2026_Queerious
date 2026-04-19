@@ -1,0 +1,13 @@
+It was you, Starry!
+|3Huh!? What did I say?
+|4Wait, I think you're right.
+|1Remember when you said that everyone has attended atleast one Pride meeting before today?
+|2Actually, that's not true.
+|0...Why is everyone looking at m-
+|0OH!
+|0That's right! Before today, I never attended a meeting.
+|3...
+|3How did I make such a blunder? You're right, Frog, you never attended a Pride meeting before.
+|0It's okay, Starry, you probably got a bit confused since I knew you beforehand.
+|1Yeah, no harm done.
+|5PUZZLE COMPLETE

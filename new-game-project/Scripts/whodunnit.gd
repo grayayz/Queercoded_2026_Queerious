@@ -2,6 +2,7 @@ extends Control
 
 var text = "res://Text/prompt.txt"
 var wrong = "res://Text/wrong.txt"
+@export var progress : String
 
 func _on_eureka_pressed() -> void:
 	show()
@@ -19,4 +20,8 @@ func _on_wrong_pressed() -> void:
 	hide()
 
 func _on_right_pressed() -> void:
-	pass # Replace with function body.
+	var box = get_tree().root.find_child("dialogue_Box", true, false)
+	Global.detective = false
+	box.parse(progress)
+	box.type()
+	hide()
